@@ -29,21 +29,21 @@ matrix:
 #           - addon-google_apis-google-15
 #           - sys-img-armeabi-v7a-google_apis-15
 # ##-</CN1:android-15>##
-# ##<CN1:android-16>##
-#     - language: android
-#       jdk: oraclejdk8
-#       env: CN1_PLATFORM=android API=16 CN1_RUNTESTS_ANDROID_EMULATOR=1
-#       addons:
-#         apt:
-#           packages:
-#             - ant
-#             - maven
-#       android:
-#         components:
-#           - platform-tools
-#           - android-16
-#           - sys-img-armeabi-v7a-android-16
-# ##</CN1:android-16>##
+##<CN1:android-16>##
+    - language: android
+      jdk: oraclejdk8
+      env: CN1_PLATFORM=android API=16 CN1_RUNTESTS_ANDROID_EMULATOR=1
+      addons:
+        apt:
+          packages:
+            - ant
+            - maven
+      android:
+        components:
+          - platform-tools
+          - android-16
+          - sys-img-armeabi-v7a-android-16
+##</CN1:android-16>##
 # ##<CN1:android-17>##
 #     - language: android
 #       jdk: oraclejdk8
@@ -142,6 +142,7 @@ matrix:
 
 script:
   - bash .travis/build.sh;
+
 
 
 
